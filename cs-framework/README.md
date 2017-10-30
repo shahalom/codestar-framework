@@ -35,13 +35,24 @@ require_once get_template_directory() .'/cs-framework/cs-framework.php';
 ## Enable - Disable Mods
 Add define code on your `themename/functions.php` directly.
 ```php
-define( 'CS_ACTIVE_FRAMEWORK',  true  ); // default true
-define( 'CS_ACTIVE_METABOX',    false ); // default true
-define( 'CS_ACTIVE_TAXONOMY',   false ); // default true
-define( 'CS_ACTIVE_SHORTCODE',  false ); // default true
-define( 'CS_ACTIVE_CUSTOMIZE',  false ); // default true
+define( 'CS_ACTIVE_FRAMEWORK',   true  ); // default true
+define( 'CS_ACTIVE_METABOX',     false ); // default true
+define( 'CS_ACTIVE_TAXONOMY',    false ); // default true
+define( 'CS_ACTIVE_SHORTCODE',   false ); // default true
+define( 'CS_ACTIVE_CUSTOMIZE',   false ); // default true
 ```
 or take a look for change define base code from `/cs-framework/cs-framework.php` directly.
+
+## Enable Light Theme
+Add the following define code somewhere in your theme or plugin, and light theme will be active.
+
+```php
+define( 'CS_ACTIVE_LIGHT_THEME',  true  ); // default false
+```
+
+### Light Theme Screenshot
+
+[![Codestar Framework Screenshot](http://codestarframework.com/assets/images/framework/screenshot-light-1.png)](http://codestarframework.com/assets/images/framework/screenshot-light-1.png)
 
 ## Overriding Files
 You can override an existing file without change `themename/cs-framework` folder. just create one `themename/cs-framework-override` folder on your theme directory. for eg:
