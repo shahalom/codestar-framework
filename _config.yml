@@ -10,7 +10,7 @@ version: 1.0.2
 
 # Settings
 permalink: pretty
-markdown: redcarpet
+markdown: kramdown
 exclude: ['README.md', 'Guardfile']
 
 # Github
