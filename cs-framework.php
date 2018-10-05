@@ -52,6 +52,7 @@ if( ! function_exists( 'cs_framework_init' ) && ! class_exists( 'CSFramework' ) 
     defined( 'CS_ACTIVE_SHORTCODE' )   or  define( 'CS_ACTIVE_SHORTCODE',   true  );
     defined( 'CS_ACTIVE_CUSTOMIZE' )   or  define( 'CS_ACTIVE_CUSTOMIZE',   true  );
     defined( 'CS_ACTIVE_LIGHT_THEME' ) or  define( 'CS_ACTIVE_LIGHT_THEME', false );
+    defined( 'CS_ACTIVE_INIT_SAMPLE' ) or  define( 'CS_ACTIVE_INIT_SAMPLE', true );
 
     // helpers
     cs_locate_template( 'functions/deprecated.php'     );
@@ -71,13 +72,14 @@ if( ! function_exists( 'cs_framework_init' ) && ! class_exists( 'CSFramework' ) 
     cs_locate_template( 'classes/shortcode.class.php'  );
     cs_locate_template( 'classes/customize.class.php'  );
 
-    // configs
-    cs_locate_template( 'config/framework.config.php'  );
-    cs_locate_template( 'config/metabox.config.php'    );
-    cs_locate_template( 'config/taxonomy.config.php'   );
-    cs_locate_template( 'config/shortcode.config.php'  );
-    cs_locate_template( 'config/customize.config.php'  );
-
+    if( CS_ACTIVE_INIT_SAMPLE ) {
+      // configs
+      cs_locate_template( 'config/framework.config.php'  );
+      cs_locate_template( 'config/metabox.config.php'    );
+      cs_locate_template( 'config/taxonomy.config.php'   );
+      cs_locate_template( 'config/shortcode.config.php'  );
+      cs_locate_template( 'config/customize.config.php'  );
+    }
   }
   add_action( 'init', 'cs_framework_init', 10 );
 }
